@@ -1,0 +1,56 @@
+<script type="text/javascript" src="/public/js/helper.js" defer></script>
+<main id="adminPage">
+    <section id="adminContainer">
+        <h1>Users</h1>
+        <div id="stream-cintainer">
+            {{#each usersData}}
+            <div id="formContainer">
+                <div id="detailsContainer">
+                <p>Name: {{name}}</p>
+                <p>Email: {{email}}</p>
+                </div>
+                <div id="buttonContainer">
+                        <input type="text" name="delEmail" id="delEmail" value="{{email}}" hidden>
+                        <button class="flt-btn del" onclick="removeUser('{{email}}')"><i class="bi bi-trash"></i>DELETE</button>
+                        <a class="flt-btn upd" href="/users/update/{{email}}"><i class="bi bi-pencil-square"></i> UPDATE</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+    <section id="adminContainer">
+        <h1>Classes</h1>
+        <div id="stream-cintainer">
+            {{#each classesData}}
+            <div id="formContainer">
+                <div id="detailsContainer">
+                <p>Name: {{className}}</p>
+                <p>Instructor: {{classInstructor}}</p>
+                <p>Class Duration:{{classDuration}}</p>
+                </div>
+                <div id="buttonContainer">
+                    <a class="flt-btn upd" href="/classes/update/{{id}}"><i class="bi bi-pencil-square"></i> UPDATE</a>
+            </div>
+        </div>
+        {{/each}}
+        </div>
+        
+    </section>
+
+    <section id="adminContainer">
+        <h1>Payments</h1>
+        <div id="stream-cintainer">
+            {{#each paymentsData}}
+                <div id="formContainer" >
+                    <div id="detailsContainer">
+                    <p>Transaction ID: {{id}}</p>
+                    <p>Email: {{email}}</p>
+                    <p>Total: ${{total}}</p>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </section>
+
+</main>

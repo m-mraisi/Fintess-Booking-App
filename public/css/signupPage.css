@@ -1,0 +1,48 @@
+#signupPage{
+    width: 100%;
+    height:95vh;
+    background-color: gray;
+    padding: 10% 0;
+}
+
+.signupContainer {
+    width: fit-content;
+    height:fit-content;
+    margin:0 auto;
+    display:grid;
+    background-color: #f1f2f6;
+    padding: 3% 3%;
+    row-gap: 10px;
+    border-radius: 10px;
+    color: black;
+}
+#signupPage h1 {
+    font-weight: bold;
+    text-align: center;
+    color: rgb(61, 61, 224);
+    font-size: 25px;
+    font-family: 'Catamaran', sans-serif;
+    padding: 0;
+    margin: 0px;
+
+}
+#signupPage form, #signupPage .form {
+    display:grid;
+    width: 100%;
+    margin:0 auto;   
+    row-gap: 10px;
+    text-align: center;
+}
+
+#signupPage .log-input {
+    width: 100%;
+    margin:0 auto;   
+}
+
+#signupPage .flt-btn{
+    color: #f1f2f6;
+    background-color: #FE4A19;
+    padding: 13px 0px;
+    font-size: 12px;
+    width: 80%;
+}

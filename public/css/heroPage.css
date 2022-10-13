@@ -1,0 +1,28 @@
+#heroPage {
+    padding-top: 15%;
+    height:95vh;
+    width: 100%;
+    text-align: center;
+    color:white;
+    background-image: url('https://images.unsplash.com/photo-1615386703285-4fea008eef2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#heroPage h1 {
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Catamaran', sans-serif;
+    text-shadow: 2px 2px 4px #000000;
+    padding: 0;
+    margin: 0px;
+
+}
+#heroPage p {
+    font-size: 40px;
+    margin: 12px 0px;
+    
+}
+a {
+    color:white;
+}

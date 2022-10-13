@@ -1,0 +1,16 @@
+<main id="loginPage">
+    <div class="loginContainer">
+    <h1>LOGIN OR SIGNUP</h1>
+    <form action="/login" method="POST">
+        {{#if msg}}
+        <p class={{msg_class}}>{{msg}}</p>
+        {{/if}}
+        <input class="log-input" type="email" name="userEmail" id="userEmail" placeholder="Enter email address">
+        <input class="log-input" type="password" name="userPassword" id="userPassword" placeholder="Enter password">
+        <button class="flt-btn" type="submit" id="log-btn">LOGIN</button>
+        <p>dont have an account?</p>
+        <a class="flt-btn" href="/signup" id="reg-btn">CREATE ACCOUNT</a>
+        </div>
+    </form>
+</main>
+</div>

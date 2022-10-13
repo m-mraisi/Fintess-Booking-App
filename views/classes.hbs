@@ -1,0 +1,29 @@
+<main id="classesPage">
+    <h1>Our Classes</h1>
+    <p>Let us help you find a class that meets your fitness goals.</p>
+    <div id="classes-container">
+        {{#each this.classesData}}
+            <div class="classItemContainer" id={{id}}>
+                <img src="{{img}}">
+                <div class="classDetails">
+                
+                <h1 name="className" id="inner-span"><span>{{className}}</span> with <span>{{classInstructor}}</span></h1>
+                <p name="classDuration" id="inner-p" value={{classDuration}}>{{classDuration}} min</p>
+                <form action="/cartItems" method="post"> 
+                    <input name="classInstructor" id="classInstructor" value="{{classInstructor}}" hidden>
+                    <input name="classDuration" id="classDuration" value="{{classDuration}}" hidden>
+                    <input name="email" id="email" value="{{../user.email}}" hidden>
+                    <input name="className" id="className" value="{{className}}" hidden>
+                    <input name="class_id" id="class_id" value="{{id}}" hidden>
+                    {{#if disabled}}
+                    <button type="submit" class="btn-disabled" "disabled">Book Now</button>
+                    <p id="already-in-cart">This class is already in cart</p>
+                    {{else}}
+                    <button type="submit" class="flt-btn"  >Book Now</button>
+                    {{/if}}
+                </form>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</main>

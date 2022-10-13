@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness</title>
+    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/sports-fitness-line-color-vol-4/52/gym__athlete__fitness__dumbbell__muscle__exercise__training-512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@800&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/public/css/{{cssFile}}">
+</head>
+<body>
+    <header>
+        <div>
+            <ul>
+                <li><a href="/"><i class="bi bi-house-fill"></i> Home</a></li>
+                <li><a href="/classes"><i class="bi bi-activity"></i> Classes</a></li>
+                {{#if user.isAdmin}}
+                <li><a href="/admin"><i class="bi bi-exclamation-octagon-fill"></i> Admin</a></li>
+                {{/if}}
+            </ul>
+            <ul id="right-links">
+                <li><i class="bi bi-person-circle"></i> {{user.email}}</li>
+                <li><a id="cart-btn" href="/checkout"><i class="bi bi-cart-check-fill"></i> Cart</a></li>
+                <li><a id="logout-btn" href="/logout"><i class="bi bi-door-closed-fill"></i> Logout</a></li>
+            </ul>
+        </div>
+    </header>
+    {{#if msg}}
+    <p class="{{msg_class}}">{{msg}}</p>
+    {{/if}}
+
+    {{{ body }}}
+</body>
+</html>

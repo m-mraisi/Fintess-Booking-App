@@ -1,0 +1,54 @@
+<script type="text/javascript" src="/public/js/checkout.js" defer></script>
+<main id="checkoutPage">
+    <form action="/checkout" method="post"> 
+        <h2 class="blue-bold">CUSTOMER DETAILS</h2>
+        <input class="input-box" type="text" id="input-name" name="customerName" placeholder="Enter your name" required>
+        <input class="input-box" type="email" id="input-email" name="customerEmail" placeholder="Enter your email" required>
+        <h2  class="blue-bold">WOULD YOU LIKE TO JOIN AS A MEMBER?</h2>
+        <P>Members get unlimited classes, for a low monthly price.</P>
+        <div id="member-yes-no">
+            <input type="radio" name="JoinAsMember" id="Radio-Member-Yes" value="Yes">
+            <label for="Radio-Member-Yes">Yes</label>
+            <input type="radio" name="JoinAsMember" id="Radio-Member-No" value="No" checked>
+            <label for="Radio-Member-No">No</label>
+        </div>
+        <select  class="input-box"  name="MonthlyPass" id="MonthlyPass" disabled>
+            <option value="35">Monthly Pass - $35/mnth</option>
+            <option value="150">Quarterly Pass - $150/quartor</option>
+            <option value="300">Yearly Pass - $300/year</option>
+        </select>
+        <h2  class="blue-bold">PAYMENT INFORMATION</h2>
+        {{!-- <label for="ccn">Credit card info</label> --}}
+        <input class="input-box" type="tel" name="ccn" id="ccn" inputmode="numeric" placeholder="Enter credit card number (xxxx xxxx xxxx xxxx)" maxlength="19" required>
+        <input class="input-box" type="text" name="expiryDate" id="expiryDate" placeholder="Enter expiry (MM/YY)" maxlength="5" required>
+        <button class="flt-btn" type="submit" id="btn-pay">PAY</button>
+    </form>
+    
+    <div id="CartDetails">
+        <h1>Cart</h1>
+        <div id="cart-classes">
+            {{#each classes}}
+                <div id="cart-item" class="grid50">
+                    <p>{{className}} with {{classInstructor}}</p>
+                    <button class="blue-bold" id="btn-remove" value={{class_id}} onclick="removeItem({{class_id}})">REMOVE</button>
+                    <p>{{this.classDuration}} mins</p>
+                </div>
+            {{/each}}
+        </div>
+        <div id="cart-member">
+
+        </div>
+        <hr>
+        <div id="div-sub-tax" class="grid50">
+            <label for="">Subtotal:</label>
+            <p id="subtotal">${{bill.subtotal}}</p>
+            <label for="">Tax:</label>
+            <p id="tax">${{bill.tax}}</p>
+        </div>
+        <hr>
+        <div id="div-total" class="grid50">
+            <label for="">Total:</label>
+            <p id="total">${{bill.total}}</p>
+        </div>
+    </div>
+</main>

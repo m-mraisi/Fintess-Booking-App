@@ -1,0 +1,75 @@
+#checkoutPage {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 100px;
+    column-gap: 20px;
+}
+
+#checkoutPage form, #checkoutPage #CartDetails{
+    background-color: white;
+    padding: 12px;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+#checkoutPage .blue-bold{
+    color: #3233CB;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Catamaran', sans-serif;
+}
+
+#checkoutPage form h2{
+    margin-top: 10px;
+}
+
+#checkoutPage .input-box{
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 12px 1px;
+    border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#checkoutPage #member-yes-no, #checkoutPage form p{
+    margin: 12px 0px;
+    display: block;
+}
+
+#checkoutPage form p{
+    color: #646464;
+}
+
+#checkoutPage form #btn-pay{
+    width: 100%;
+    font-weight: bold;
+}
+
+#checkoutPage #CartDetails h1{
+    font-size: 30px;
+    margin: 10px 0px;
+}
+
+#checkoutPage .grid50{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin: 12px 0px;
+}
+#checkoutPage #cart-classes{
+    overflow: auto;
+    height:300px;
+}
+#checkoutPage #CartDetails #btn-remove{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+#checkoutPage #CartDetails label, #checkoutPage #CartDetails p{
+    margin: 10px 0px;
+    display: inline-block;
+}

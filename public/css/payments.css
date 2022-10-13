@@ -1,0 +1,48 @@
+#paymentsPage{
+    width: 100%;
+    background-color: gray;
+    padding: 10% 0;
+    height:95vh;
+}
+
+.paymentContainer {
+    width: fit-content;
+    height:80%;
+    margin:0 auto;
+    text-align: center;
+    display:grid;
+    background-color: #f1f2f6;
+    padding: 3% 3%;
+    row-gap: 10px;
+    border-radius: 10px;
+    color: black;
+}
+#paymentsPage h1 {
+    font-weight: bold;
+    text-align: center;
+    color: rgb(61, 61, 224);
+    font-size: 50px;
+    font-family: 'Catamaran', sans-serif;
+    padding: 0;
+    margin: 0px;
+
+}
+
+#paymentsPage a {
+    background-color: #FE4A19;
+    text-align: center;
+    color:white;
+    display: block;
+    width: 100%;
+    height: fit-content;
+    margin: 10px 0;
+    padding: 10px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+#paymentsPage a:hover{
+    background-color: rgb(61, 61, 224);
+}

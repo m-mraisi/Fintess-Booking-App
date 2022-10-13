@@ -1,0 +1,88 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    height: 95vh;
+}
+header {
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 5vh;
+    padding: 0.5% 30px;
+    font-family: 'Catamaran', sans-serif;
+    /* position: fixed; */
+    top: 0;
+}
+header > div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 15px;
+}
+
+#right-links {
+    text-align: right;
+}
+
+header a {
+    text-decoration: none;
+    color:#FFFFFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+header a:hover {
+    opacity: 70%;
+}
+
+.flt-btn{
+    color: black;
+    display: block;
+    background-color:  #ff6348;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: fit-content;
+    margin:0 auto;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+}
+
+.flt-btn:hover{
+    background-color:#ff7f50;
+}
+
+.success, .fail {
+    background-color: rgb(59, 142, 59);
+    text-align: center;
+    color:white;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.fail {
+    background-color: #FE4A19;
+
+}
+
+.log-input {
+    padding: 10px 10px;
+    font-size: 17px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

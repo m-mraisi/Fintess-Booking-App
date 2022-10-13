@@ -1,0 +1,12 @@
+<script type="text/javascript" src="/public/js/helper.js" defer></script>
+<main id="signupPage">
+    <div class="signupContainer">
+    <div class="form">
+        {{#if updateEmail}}
+            {{> userForm updateEmail=updateEmail}}
+        {{else}}
+            {{> classesForm classId=classId className=className}}
+        {{/if}}
+    </div>
+    </div>
+</main>
