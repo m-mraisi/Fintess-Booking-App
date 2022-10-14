@@ -1,6 +1,5 @@
 // start of boiler plate
 require("dotenv").config();
-// test
 const express = require("express");
 const app = express();
 const port = process.env.PORT;
