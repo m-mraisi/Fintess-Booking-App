@@ -4,7 +4,6 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT;
 const host = process.env.HOST;
-const Domain = process.env.DOMAIN;
 app.use("/public", express.static("public"));
 app.use(express.static("public"));
 // connect to db
