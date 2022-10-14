@@ -68,7 +68,7 @@ app.use((req, res) => {
 });
 
 const startServer = () => {
-  console.log(`The server is running on ${Domain}`);
+  console.log(`The server is running on ${host}:${port}`);
   console.log(`Press CTRL + C to exit`);
 };
 app.listen(port, startServer);
