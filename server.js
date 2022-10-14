@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT;
 const host = process.env.HOST;
+const Domain = process.env.DOMAIN;
 app.use("/public", express.static("public"));
 app.use(express.static("public"));
 // connect to db
@@ -67,7 +68,7 @@ app.use((req, res) => {
 });
 
 const startServer = () => {
-  console.log(`The server is running on ${host}:${port}`);
+  console.log(`The server is running on ${Domain}`);
   console.log(`Press CTRL + C to exit`);
 };
 app.listen(port, startServer);
