@@ -1,1 +1,7 @@
+
+# node_modules files to be ignored
 node_modules
+
+# dotenv environment variables file
+
+.env

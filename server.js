@@ -1,8 +1,9 @@
 // start of boiler plate
-const path = require("path");
+require("dotenv").config();
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
+const host = process.env.HOST;
 app.use("/public", express.static("public"));
 app.use(express.static("public"));
 // connect to db
@@ -43,7 +44,11 @@ app.get("/", (req, res) => {
   if (req.session.loggedInUser === undefined) {
     return res.render("hero", { layout: "primary", cssFile: "heroPage.css" });
   } else {
-    return res.render("hero", { layout: "protected", cssFile: "heroPage.css",user:req.session.loggedInUser });
+    return res.render("hero", {
+      layout: "protected",
+      cssFile: "heroPage.css",
+      user: req.session.loggedInUser,
+    });
   }
 });
 // Endpoints with only one action
@@ -62,7 +67,7 @@ app.use((req, res) => {
 });
 
 const startServer = () => {
-  console.log(`The server is running on http://localhost:${port}`);
+  console.log(`The server is running on ${host}:${port}`);
   console.log(`Press CTRL + C to exit`);
 };
 app.listen(port, startServer);

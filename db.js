@@ -1,7 +1,5 @@
 const mongoose = require("mongoose");
-const mongoURI =
-  process.env.MONGOURI ||
-  "mongodb+srv://admin:nL8ahtQpvGMZtLfo@cluster-1.bpugdk4.mongodb.net/fitness_g05?retryWrites=true&w=majority";
+const mongoURI = process.env.MONGOURI;
 
 const connectDb = async () => {
   try {
