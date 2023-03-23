@@ -69,3 +69,9 @@
     cursor: not-allowed;
     border: none;
 }
+
+/* @media (max-width: 768px) {
+    #classesPage #classes-container{
+        width: auto;
+    }
+} */

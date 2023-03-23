@@ -26,3 +26,20 @@
 a {
     color:white;
 }
+
+
+@media only screen and (max-width: 768px) {
+    #heroPage {
+        padding-top: 100px;
+    }
+    #heroPage h1 {
+        font-size: 20px;
+    }
+    #heroPage p{
+        justify-content: center;
+        font-size: medium;
+    }
+    #heroPage a{
+        size: 100px 200px;
+    }
+  }
